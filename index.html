@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .banner {
+            width: 100%;
+            height: 200px;
+            background-image: url('banner-image.jpg');
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 20px;
+        }
+        .reviews {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 90%;
+            margin-bottom: 20px;
+        }
+        .review {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            flex-basis: 30%;
+            box-sizing: border-box;
+        }
+        .review.vertical {
+            flex-basis: 100%;
+        }
+        .auth-container {
+            width: 90%;
+            max-width: 400px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        .auth-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .auth-container input[type="text"],
+        .auth-container input[type="password"],
+        .auth-container input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+        .auth-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Banner Image -->
+    <div class="banner"></div>
+
+    <!-- Reviews Section -->
+    <div class="reviews">
+        <div class="review">Review 1</div>
+        <div class="review">Review 2</div>
+        <div class="review">Review 3</div>
+        <div class="review vertical">Review 4</div>
+        <div class="review vertical">Review 5</div>
+    </div>
+
+    <!-- Sign Up / Login Section -->
+    <div class="auth-container">
+        <h2>Sign Up / Login</h2>
+        <form action="#" method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+</html>
